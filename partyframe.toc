@@ -1,3 +1,4 @@
 ## Interface: 90002
-## Title: partyframe
+## Author: Robdog / Mageiden
+## Title: PartyFrame
 core.lua
