@@ -13,9 +13,9 @@ local hide = {
     PartyMemberFrame1PVPIcon, PartyMemberFrame2PVPIcon,
     PartyMemberFrame3PVPIcon, PartyMemberFrame4PVPIcon,
     PlayerPVPIcon, CompactRaidFrameManager,
-    PlayerFrameGroupIndicator, PartyMemberFrame1Name,
+    PlayerFrameGroupIndicator, --[[PartyMemberFrame1Name,
     PartyMemberFrame2Name, PartyMemberFrame3Name,
-    PartyMemberFrame4Name,
+    PartyMemberFrame4Name,]]--
 }
 
     local members = GetNumGroupMembers()
