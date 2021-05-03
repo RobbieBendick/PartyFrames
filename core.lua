@@ -9,15 +9,30 @@ local partyMemberFrames = {
 local partyMemberFrameTextures = {
     PartyMemberFrame1Texture, PartyMemberFrame2Texture, PartyMemberFrame3Texture, PartyMemberFrame4Texture
 }
+local hide = {
+    PartyMemberFrame1PVPIcon, PartyMemberFrame2PVPIcon,
+    PartyMemberFrame3PVPIcon, PartyMemberFrame4PVPIcon,
+    PlayerPVPIcon, CompactRaidFrameManager,
+    PlayerFrameGroupIndicator, PartyMemberFrame1Name,
+    PartyMemberFrame2Name, PartyMemberFrame3Name,
+    PartyMemberFrame4Name,
+}
+
     local members = GetNumGroupMembers()
+    --function only runs when you're in a group
     if members > 1 then
         ShowPartyFrame();
-        CompactRaidFrameManager:Hide();
+        --increase size of party frames
         for i=1,#partyMemberFrames do
             partyMemberFrames[i]:SetScale(1.3)
         end
+        --darken party frame borders
         for i=1,#partyMemberFrameTextures do
             partyMemberFrameTextures[i]:SetVertexColor(0.1,0.1,0.1)
+        end
+        --hide everything in the hide table
+        for i=1,#hide do
+            hide[i]:Hide()
         end
     end
 end
