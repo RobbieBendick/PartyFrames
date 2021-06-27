@@ -2,7 +2,7 @@ local frame = CreateFrame("FRAME", "PartyFrame")
 frame:RegisterEvent("PLAYER_ENTERING_WORLD")
 frame:RegisterEvent("ZONE_CHANGED_NEW_AREA")
 
-local function eventHandler(self,event,...)
+local function updateHandler(self,event,...)
 local partyMemberFrames = {
     PartyMemberFrame1, PartyMemberFrame2, PartyMemberFrame3, PartyMemberFrame4
 }
@@ -36,4 +36,4 @@ local hide = {
         end
     end
 end
-frame:SetScript("OnUpdate", eventHandler)
+frame:SetScript("OnUpdate", updateHandler)
