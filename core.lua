@@ -19,7 +19,7 @@ local hide = {
 }
 
     local members = GetNumGroupMembers()
-    --function only runs when you're in a group
+    --ShowPartyFrame function only runs when you're in a group
     if members > 1 then
         ShowPartyFrame();
         --increase size of party frames
